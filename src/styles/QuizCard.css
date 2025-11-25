@@ -1,0 +1,134 @@
+.quiz-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.question-counter {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.timer {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.question {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.option {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.option:hover:not(:disabled) {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.option:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.option.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.option.incorrect {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  text-decoration: line-through;
+}
+
+.option.show-correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.feedback {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.correct-feedback {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.incorrect-feedback {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.next-button {
+  display: block;
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.next-button:hover {
+  background-color: #2980b9;
+}

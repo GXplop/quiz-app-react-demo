@@ -1,0 +1,108 @@
+/* ===== GLOBAL STYLES ===== */
+/* Reset and base styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Base styles for the body */
+body {
+  background-color: #f5f7fa;  /* Light gray background */
+  color: #333;                /* Dark gray text for better readability */
+  line-height: 1.6;           /* Comfortable line spacing */
+}
+
+/* Main container for the entire app */
+.app-container {
+  max-width: 800px;           /* Maximum width for better readability */
+  margin: 0 auto;             /* Center the container */
+  padding: 2rem 1rem;         /* Add some breathing room */
+  min-height: 100vh;          /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* Vertically center content */
+}
+
+/* ===== BUTTON STYLES ===== */
+/* Base button styles */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Smooth hover effects */
+  outline: none;             /* Remove default focus outline (we'll add our own) */
+}
+
+/* Disabled button state */
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;              /* Visual feedback for disabled state */
+}
+
+/* Next button specific styles */
+.next-button {
+  display: block;
+  width: 100%;
+  max-width: 400px;          /* Reasonable max width for better UX */
+  margin: 1.5rem auto 0;     /* Space above and center horizontally */
+  padding: 0.8rem 2rem;      /* Comfortable touch target size */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #3498db;  /* Primary blue color */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+/* Hover effect for next button */
+.next-button:hover {
+  background-color: #2980b9;  /* Slightly darker blue on hover */
+  transform: translateY(-2px);  /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+/* Active/click effect for next button */
+.next-button:active {
+  transform: translateY(0);  /* Return to normal position when clicked */
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 600px) {
+  /* Adjust container padding on mobile */
+  .app-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Full width button on mobile */
+  .next-button {
+    width: 100%;
+    max-width: none;  /* Override max-width on small screens */
+    margin: 1rem 0 0;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+/* Fade in from bottom animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide in from right animation */
+@keyframes slideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Text alignment utility */
+.text-center {
+  text-align: center;
+}
+
+/* Margin top utility classes */
+.mt-1 { margin-top: 0.5rem; }  /* Extra small margin */
+.mt-2 { margin-top: 1rem; }     /* Small margin */
+.mt-3 { margin-top: 1.5rem; }   /* Medium margin */
+.mt-4 { margin-top: 2rem; }     /* Large margin */
